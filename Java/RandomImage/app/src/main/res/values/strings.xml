@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">RandomImage</string>
+    <string name="imgCarousel_ContentDescription">Carousel Image</string>
+    <string name="imgChangeImage_Text">Change Image</string>
+</resources>
