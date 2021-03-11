@@ -1,0 +1,844 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2a3050"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txtInput"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="2"
+        android:background="#343957"
+        android:gravity="center_vertical|end"
+        android:paddingStart="16dp"
+        android:paddingEnd="16dp"
+        android:text="@string/txtInput_Text"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnLeftParenthesis"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnLeftParenthesis_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnRightParenthesis"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnRightParenthesis_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnMemClear"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnMemClear_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnMemAdd"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnMemAdd_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnMemDiff"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnMemDiff_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnMemRecall"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnMemRecall_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnAC"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnAC_Text"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnSign"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnSign_Text"
+            android:textColor="#ff3664"
+            android:textSize="30sp"
+            app:backgroundTint="#4f556f" />
+
+        <Button
+            android:id="@+id/btnPercent"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnPercent_Text"
+            android:textColor="#ff3664"
+            android:textSize="30sp"
+            app:backgroundTint="#4f556f" />
+
+        <Button
+            android:id="@+id/btnDiv"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnDiv_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#ff3664" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnShift"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnShift_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnPwd2"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnPwd2_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnPwd3"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnPwd3_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnPwdY"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnPwdY_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnEulerX"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnEulerX_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn10X"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn10X_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="20sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn7"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn7_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn8"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn8_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d" />
+
+        <Button
+            android:id="@+id/btn9"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn9_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d" />
+
+        <Button
+            android:id="@+id/btnProd"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnProd_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#ff3664" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btn1DivX"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn1DivX_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnSqrt"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnSqrt_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="20sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn3Root"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn3Root_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="20sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnYRoot"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnYRoot_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="20sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnLn"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnLn_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnLog10"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnLog10_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="15sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn4"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn4_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn5"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn5_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d" />
+
+        <Button
+            android:id="@+id/btn6"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn6_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d" />
+
+        <Button
+            android:id="@+id/btnDiff"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnDiff_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#ff3664" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnFact"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnFact_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnSin"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnSin_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="20sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnCos"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnCos_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="19sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnTan"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnTan_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="20sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnEuler"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnEuler_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnEE"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnEE_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn1"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn1_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn2"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn2_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d" />
+
+        <Button
+            android:id="@+id/btn3"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn3_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnAdd_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#ff3664" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/btnRad"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnRad_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="18sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnSinH"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnSinH_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="16sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnCosH"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnCosH_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="15sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnTanH"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnTanH_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="15sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnPi"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnPi_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="22sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnRand"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnRand_Text"
+            android:textAllCaps="false"
+            android:textColor="#ff3664"
+            android:textSize="14sp"
+            app:backgroundTint="#4f556f"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btn0"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btn0_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d"
+            tools:ignore="NestedWeights" />
+
+        <Button
+            android:id="@+id/btnDot"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnDot_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#3a3f5d" />
+
+        <Button
+            android:id="@+id/btnResult"
+            style="@style/Widget.MaterialComponents.Button"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1"
+            android:insetLeft="2dp"
+            android:insetTop="2dp"
+            android:insetRight="2dp"
+            android:insetBottom="2dp"
+            android:text="@string/btnResult_Text"
+            android:textSize="30sp"
+            app:backgroundTint="#ff3664" />
+    </LinearLayout>
+
+</LinearLayout>
