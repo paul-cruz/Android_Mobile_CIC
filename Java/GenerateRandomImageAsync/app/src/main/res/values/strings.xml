@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Generate Random Bitmap App</string>
+    <string name="action_settings">Settings</string>
+    <string name="buttonDrawBitmapText">Load Random Bitmap</string>
+    <string name="itemMenuLoadBitmapTitle">Load Bitmap</string>
+    <string name="itemClearBitmapTitle">Remove Bitmap</string>
+    <string name="itemMenuExitApp">Exit</string>
+</resources>
