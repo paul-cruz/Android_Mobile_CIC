@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@color/primary_variant_color"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.25" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.50" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/verticalGuideLine3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.75" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontalGuideLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.9" />
+
+    <fragment
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/horizontalGuideLine1"
+        tools:context=".MapsFragment" />
+
+    <Button
+        android:id="@+id/btnSite1"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btnSite1_Text"
+        android:textColor="@color/secondary_color"
+        android:background="@color/primary_variant_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideLine1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideLine1" />
+
+    <Button
+        android:id="@+id/btnSite2"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btnSite2_Text"
+        android:textColor="@color/secondary_color"
+        android:background="@color/primary_variant_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideLine2"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideLine1"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideLine1" />
+
+    <Button
+        android:id="@+id/btnSite3"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btnSite3_Text"
+        android:textColor="@color/secondary_color"
+        android:background="@color/primary_variant_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/verticalGuideLine3"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideLine2"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideLine1" />
+
+    <Button
+        android:id="@+id/btnSite4"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:text="@string/btnSite4_Text"
+        android:textColor="@color/secondary_color"
+        android:background="@color/primary_variant_color"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/verticalGuideLine3"
+        app:layout_constraintTop_toTopOf="@+id/horizontalGuideLine1" />
+</androidx.constraintlayout.widget.ConstraintLayout>
